@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Features Form</title>
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/care.avif');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+h2 {
+    color: Black;
+    font-size: 36px;
+    text-align: center;
+}
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            flex: 10%;
+            padding: 10px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: Black;
+        }
+        .input-group input, 
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .input-group select {
+            width: calc(100% - 6px);
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            position: relative;
+            left: 760px;
+            bottom: 65px;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter The Values To Know About The COPD Status</h2>
+    <form action="/process_input" method="post">
+
+        <div class="container">
+
+
+            <div class="column">
+
+                <div class="input-group">
+                    <label for="visit_age">Visit Age:</label>
+                    <input type="text" id="visit_age" name="visit_age" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="Male" placeholder="Male">Male</option>
+                        <option value="Female" placeholder="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="height_cm">Height (cm):</label>
+                    <input type="text" id="height_cm" name="height_cm" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="weight_kg">Weight (kg):</label>
+                    <input type="text" id="weight_kg" name="weight_kg" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="sysBP">SysBP:</label>
+                    <input type="text" id="sysBP" name="sysBP" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="diasBP">DiasBP:</label>
+                    <input type="text" id="diasBP" name="diasBP" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="hr">Heart Rate (hr):</label>
+                    <input type="text" id="hr" name="hr" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="O2_hours_day">Oxygen Hours per Day:</label>
+                    <input type="text" id="O2_hours_day" name="O2_hours_day" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="bmi">BMI:</label>
+                    <input type="text" id="bmi" name="bmi" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="asthma">Asthma:</label>
+                    <select id="asthma" name="asthma">
+                        <option value="No" placeholder="No">No</option>
+                        <option value="Yes" placeholder="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="bronchitis_attack">Bronchitis Attack:</label>
+                    <select id="bronchitis_attack" name="bronchitis_attack">
+                        <option value="No" placeholder="No">No</option>
+                        <option value="Yes" placeholder="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="pneumonia">Pneumonia:</label>
+                    <select id="pneumonia" name="pneumonia">
+                        <option value="No" placeholder="No">No</option>
+                        <option value="Yes" placeholder="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="chronic_bronchitis">Chronic Bronchitis:</label>
+                    <select id="chronic_bronchitis" name="chronic_bronchitis">
+                        <option value="No" placeholder="No">No</option>
+                        <option value="Yes" placeholder="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="emphysema">Emphysema:</label>
+                    <select id="emphysema" name="emphysema">
+                        <option value="No" placeholder="No">No</option>
+                        <option value="Yes" placeholder="Yes">Yes</option>
+                    </select>
+                </div>
+
+                
+
+                
+
+            </div>
+
+
+            <div class="column">
+	
+		<div class="input-group">
+                    <label for="sleep_apnea">Sleep Apnea:</label>
+                    <select id="sleep_apnea" name="sleep_apnea">
+                        <option value="No" placeholder="No">No</option>
+                        <option value="Yes" placeholder="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="smoking_status">Smoking Status:</label>
+                    <select id="smoking_status" name="smoking_status">
+                        <option value="Current smoker" placeholder="Current smoker">Current smoker</option>
+                        <option value="Former smoker" placeholder="Former smoker">Former smoker</option>
+                        <option value="Never smoked" placeholder="Never smoked">Never smoked</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="SmokStartAge">Smoking Start Age:</label>
+                    <input type="text" id="SmokStartAge" name="SmokStartAge" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="CigPerDaySmokAvg">Cigarettes per Day Average:</label>
+                    <input type="text" id="CigPerDaySmokAvg" name="CigPerDaySmokAvg" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="Duration_Smoking">Duration of Smoking:</label>
+                    <input type="text" id="Duration_Smoking" name="Duration_Smoking" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="total_lung_capacity">Total Lung Capacity:</label>
+                    <input type="text" id="total_lung_capacity" name="total_lung_capacity" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="pct_emphysema">Percentage of Emphysema:</label>
+                    <input type="text" id="pct_emphysema" name="pct_emphysema" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="functional_residual_capacity">Functional Residual Capacity:</label>
+                    <input type="text" id="functional_residual_capacity" name="functional_residual_capacity" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="pct_gastrapping">Percentage of Gastrapping:</label>
+                    <input type="text" id="pct_gastrapping" name="pct_gastrapping" placeholder="Enter the Value">
+                </div>
+
+              
+
+                <div class="input-group">
+                    <label for="FEV1_FVC_ratio">FEV1/FVC Ratio:</label>
+                    <input type="text" id="FEV1_FVC_ratio" name="FEV1_FVC_ratio" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="FEV1">FEV1:</label>
+                    <input type="text" id="FEV1" name="FEV1" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="FVC">FVC:</label>
+                    <input type="text" id="FVC" name="FVC" placeholder="Enter the Value">
+                </div>
+
+                <div class="input-group">
+                    <label for="FEV1_phase2">FEV1 Phase 2:</label>
+                    <input type="text" id="FEV1_phase2" name="FEV1_phase2" placeholder="Enter the Value">
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <input type="submit" class="submit-button" value="Submit">
+
+    </form>
+</body>
+</html>

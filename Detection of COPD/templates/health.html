@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Disease Precautions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/medical.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 5px solid #ddd;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #back-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        #back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Health Precautions For COPD</h1>
+    <table>
+        <tr>
+            <th>COPD Status</th>
+            <td>{{ disease_name }}</td>
+        </tr>
+        <tr>
+            <th>Precaution 1</th>
+            <td>{{ precaution_1 }}</td>
+        </tr>
+        <tr>
+            <th>Precaution 2</th>
+            <td>{{ precaution_2 }}</td>
+        </tr>
+        <tr>
+            <th>Precaution 3</th>
+            <td>{{ precaution_3 }}</td>
+        </tr>
+        <tr>
+            <th>Precaution 4</th>
+            <td>{{ precaution_4 }}</td>
+        </tr>
+    </table>
+    <form action="/">
+        <button id="back-button">Back</button>
+    </form>
+</body>
+
+</html>
